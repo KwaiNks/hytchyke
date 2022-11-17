@@ -1,0 +1,114 @@
+{
+  "rides": [
+    {
+      "image": "",
+      "date": "2022-11-23",
+      "firstname": "Richmond",
+      "lastname": "Nkansah",
+      "departure": "New York",
+      "destination": "New Jersey",
+      "price": "15",
+      "seats": "2",
+      "id": 1
+    },
+    {
+      "image": "",
+      "date": "2022-11-23",
+      "firstname": "Drew",
+      "lastname": "Thalheimer",
+      "departure": "New York",
+      "destination": "Las Vegas",
+      "price": "100",
+      "seats": "4",
+      "id": 2
+    },
+    {
+      "image": "",
+      "date": "2022-11-29",
+      "firstname": "frank",
+      "lastname": "Iron",
+      "departure": "New York",
+      "destination": "New York",
+      "price": "3",
+      "seats": "1",
+      "id": 3
+    },
+    {
+      "image": "",
+      "date": "2022-12-07",
+      "firstname": "Richmond",
+      "lastname": "Nkansah",
+      "departure": "New York",
+      "destination": "New Jersey",
+      "price": "2",
+      "seats": "1",
+      "id": 4
+    },
+    {
+      "image": "",
+      "date": "2022-11-22",
+      "firstname": "Richmond",
+      "lastname": "Nkansah",
+      "departure": "New York",
+      "destination": "New York",
+      "price": "5",
+      "seats": "2",
+      "id": 5
+    },
+    {
+      "image": "",
+      "date": "2022-11-08",
+      "firstname": "Frank",
+      "lastname": "Iron",
+      "departure": "New York",
+      "destination": "w",
+      "price": "2",
+      "seats": "2",
+      "id": 6
+    },
+    {
+      "image": "",
+      "date": "2022-11-15",
+      "firstname": "frank",
+      "lastname": "Nkansah",
+      "departure": "lasvegas",
+      "destination": "toronto",
+      "price": "5",
+      "seats": "1",
+      "id": 7
+    },
+    {
+      "image": "",
+      "date": "2022-11-21",
+      "firstname": "Look",
+      "lastname": "Up",
+      "departure": "D.C",
+      "destination": "Lowell",
+      "price": "21.45",
+      "seats": "1",
+      "id": 8
+    },
+    {
+      "image": "",
+      "date": "2022-11-30",
+      "firstname": "Richmond",
+      "lastname": "Iron",
+      "departure": "New Jersey",
+      "destination": "New York",
+      "price": "2",
+      "seats": "1",
+      "id": 9
+    },
+    {
+      "image": "",
+      "date": "2022-11-18",
+      "firstname": "Low",
+      "lastname": "Up",
+      "departure": "D.C",
+      "destination": "Venice",
+      "price": "-10",
+      "seats": "1",
+      "id": 10
+    }
+  ]
+}
