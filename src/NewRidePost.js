@@ -1,16 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function NewRidePost({addPostRide}) {
 
     const[newDate, setNewDate] = useState("");
     const[newFirstName, setNewFirstName] = useState("")
     const[newLastName, setNewLastName] = useState("")
-    const[newImage, setNewImage] = useState("")
+    const[newImage, setNewImage] = useState([])
+    const[imageURLs, setImageURLs] = useState([])
     const[newPrice, setNewPrice] = useState(0)
     const[newDeparture, setNewDeparture] = useState("")
     const[newDestination, setNewDestination] = useState("")
     const[newNumSeats, setNewNumSeats] = useState(0)
 
+    useEffect(() => {
+        if(newImage.length < 1) return;
+        const newImageURLs = [];
+        newImage.forEach(image => newImageURLs.push(URL.createObjectURL(image)))
+        setImageURLs(newImageURLs)
+
+    }, [newImage]);
+
+    function onImageChange(e){
+        setNewImage([...e.target.files])
+    }
 
     function handleAddPostRide(e) {
         e.preventDefault();
@@ -36,8 +48,14 @@ function NewRidePost({addPostRide}) {
         setNewDestination("");
         setNewPrice(0);
         setNewNumSeats(0);
-
     }
+
+    let currDate = new Date();
+    let year = currDate.getFullYear();
+    let month = currDate.getMonth() + 1;
+    let day = currDate.getDate();
+
+let currentDateString = `${year}-${month}-${day}`;
 
     return (
         <div id="newRidePost">
@@ -49,10 +67,12 @@ function NewRidePost({addPostRide}) {
                 <input type="text" value={newDeparture} onChange={(e) => setNewDeparture(e.target.value)} name="departure" placeholder="Departure" required />
                 <input type="text" value={newDestination} onChange={(e) => setNewDestination(e.target.value)} name="destination" placeholder="Destination" required />
                 <p></p>
-                <input type="date" value={newDate} onChange={(e) => setNewDate(e.target.value)} name="date" required />
+                <input type="date" min={currentDateString} value={newDate} onChange={(e) => setNewDate(e.target.value)} name="date" required />
                 <input type="number"  min="1" max="9" value={newNumSeats} onChange={(e) => setNewNumSeats(e.target.value)} name="Seats" placeholder="Seats" required />
+                <input type="number"  step="any" min="1.0" value={newPrice} onChange={(e) => setNewPrice(e.target.value)} name="price" placeholder="Price" required />
                 <p></p>
-                <input type="float" min="1.0" value={newPrice} onChange={(e) => setNewPrice(e.target.value)} name="price" placeholder="Price" required />
+               <input type="file" multiple accept="image/*" onChange={onImageChange} />
+               {imageURLs.map(imageSrc => <img src={imageSrc} />)}
                 <button type="submit">Post Ride</button>
             </form>
         </div>

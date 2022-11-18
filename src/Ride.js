@@ -1,21 +1,30 @@
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 import React,{useState} from 'react';
 
-function Ride({rides}) {
+function Ride({rides, updateBookings}) {
     
 
     const[searchSeat, setSearchSeat] = useState("")
 
-    function handleBookings(id){
 
-        fetch(`http://localhost:3000/rides/${id}`,{
+    function handleBookings(e){
+        e.preventDefault()
+
+        const updateRides = {
+            seats: rides.seats - searchSeat,
+        }
+        fetch(`http://localhost:3000/rides/${rides.id}`,{
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
             },
-                
+            body: JSON.stringify(updateRides)
         }
         )
-       
+       .then(response => response.json())
+       .then(data => updateBookings(data))
+
+        setSearchSeat("")
     }
 
     return (
@@ -29,9 +38,9 @@ function Ride({rides}) {
             <p>Price: {'$' + rides.price}</p>
             <p>Seats Available: {rides.seats}</p>
             
-            <form>
-            <button type="submit">Book Your Seat</button>
+            <form onSubmit={handleBookings}>
             <input type="number" value={searchSeat} onChange={(e) => setSearchSeat(e.target.value)} min="1" max="9" name="Seats"  required/>
+            <button type="submit">{rides.seats === 0? isDisabled :"Book Your Seat"}</button>
             </form>
             </div>
         </div>
@@ -39,5 +48,3 @@ function Ride({rides}) {
 }
 
 export default Ride;
-
-// onChange={(e) => setSearchSeat(e.target.value)} 
