@@ -21,7 +21,6 @@ function Ride({rides}) {
     return (
         <div className='ridedetails'>
             <div className="box">
-            <img className="image" src={rides.image} alt={rides.firstname}/>
             <h4>Date of Travel: {rides.date}</h4>
             <p>Name: {rides.firstname} {rides.lastname}</p>
             <p>Departure: {rides.departure}</p>
@@ -34,6 +33,8 @@ function Ride({rides}) {
             <input type="number" value={searchSeat} onChange={(e) => setSearchSeat(e.target.value)} min="1" max="9" name="Seats"  required/>
             </form>
             </div>
+            <img className="image" src={rides.image} alt={rides.firstname}/>
+            
         </div>
     )
 }

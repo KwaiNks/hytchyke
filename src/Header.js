@@ -5,7 +5,8 @@ function Header() {
     return (
             <header id='header'>
                 <h1>
-                    HytcHike
+                <img src= "https://www.woojr.com/wp-content/uploads/2018/11/cartoon-letters-h-lowercase.jpg" height={50} />
+                HytcHike
                 </h1>
             </header>
     )

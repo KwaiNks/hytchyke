@@ -1,11 +1,37 @@
+* {
+  margin: 0;
+}
+
+
 nav {
   float: right;
 }
+
  #header {
   text-align: center;
+  text-shadow: 2px 2px 5px rgba(255, 145, 0, 0.798);
+  font-family: copperplate;
+  height: 300px;
+  font-size: 30px
 }
+
+h2, h3, a {
+  font-family: papyrus;
+  font-weight: bolder;
+}
+
+h2 { 
+  color: rgba(255, 145, 0, 0.798);
+  font-weight: bolder;
+  font-size: 30px;
+  text-shadow: 5px 5px 10px black
+}
+
 h3{
   text-align: center;
+  font-weight: bolder;
+  background-color: rgba(173, 216, 230, 0.616);
+  height: 20px
 }
 
 nav a {
@@ -15,14 +41,17 @@ nav a {
   text-decoration: none;
   font-size: 1.2em;
   color: rgb(0, 0, 0);
-  border-bottom: 2px solid rgb(0, 0, 0);
+  
   transition: 0.1s;
+  background-color: rgba(255, 145, 0, 0.798);
+  box-shadow: 5px 5px 10px;
+ 
 }
 
 nav a:hover,
 nav a:active {
-  color: tomato;
-  border-bottom: 2px solid tomato;
+  color: rgb(249, 227, 206);
+  
 }
 
 #newRidePost,
@@ -38,21 +67,85 @@ nav a:active {
 }
 
 #newRideRequest {
-  background-color: rgb(255, 255, 255);
+
 }
 
 #newRidePost {
-  background-color: rgb(255, 255, 255);
+  
 }
 
 
 .App {
   font-family: sans-serif;
+  background-image: url("https://i.pinimg.com/originals/82/ab/4f/82ab4fe54d7419263e3f64b823cc2d72.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  overflow-y: scroll;
 }
 
 .ridedetails {
-  border: 2px dotted rgb(96, 139, 168);
-  width: 350px;
+  border: 2px  rgb(96, 139, 168);
+  width: 400px;
   display: flex; 
   justify-content: space-between; 
+  background-color: rgba(173, 216, 230, 0.616);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 5px 5px 10px;
+  font-family: copperplate;
+}
+
+input {
+  background-color: rgba(85, 195, 232, 0.562);
+  margin: 5px;
+  padding-right: 0;
+  box-shadow: 5px 5px 10px black;
+  color: black;
+}
+
+::placeholder {
+  color: rgba(255, 145, 0, 0.798);
+  font-family: copperplate;
+  font-weight: bolder;
+}
+
+button {
+  margin: 5px;
+  background-color: rgba(40, 57, 247, 0.798);
+  color: white;
+  box-shadow: 5px 5px 10px black
+ 
+}
+
+input, button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-family: copperplate;
+  font-size: 20px;
+  transition: 0.1s;
+  
+}
+
+
+.div {
+    background-color: lightblue;
+}
+
+.rideList {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 50px
+}
+
+.image {
+  border-radius: 200px;
+  width: 175px;
+  height: 175px;
+  
 }
