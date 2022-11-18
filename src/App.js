@@ -4,13 +4,13 @@ import Header from './Header';
 import NewRideRequest from './NewRideRequest';
 import NewRidePost from './NewRidePost';
 import RideList from './RideList';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
 
   const [rides, setRides] = useState([])
   const [searchDeparture, setSearchDeparture] = useState("")
   const [searchDestination, setSearchDestination] = useState("")
-  // const [searchDate, setSearchDate] = useState(0)
 
   useEffect(() => {
     fetch('http://localhost:3000/rides')
@@ -36,27 +36,46 @@ function App() {
     return (
       ride.departure.toLowerCase().includes(searchDeparture.toLowerCase())
       && ride.destination.toLowerCase().includes(searchDestination.toLowerCase()
-      // && ride.date.includes(searchDate) && (ride.date === searchDate)
       )
     )
   }
   )
- 
+
+  function updateBookings(data) {
+    const newBookings = rides.map((ride) => {
+      if (ride.id === data.id) {
+        return data;
+      }
+      else {
+        return ride;
+      }
+    })
+    setRides(newBookings)
+  }
+
   return (
     <div className="App">
       <Nav />
       <br></br>
+      <br></br>
+      <br></br>
       <Header />
-      <NewRideRequest searchDeparture={searchDeparture} setSearchDeparture={setSearchDeparture}
-                      searchDestination={searchDestination} setSearchDestination={setSearchDestination} 
-                      // searchDate={searchDate} setSearchDate={setSearchDate} 
-                      />
 
-      <h3 id="listAvailableRides">
+      <Routes>
+        <Route path="/" element={<NewRideRequest searchDeparture={searchDeparture} setSearchDeparture={setSearchDeparture}
+          searchDestination={searchDestination} setSearchDestination={setSearchDestination}
+        />
+        } />
+        <Route path="/newRidePost" element={<NewRidePost addPostRide={addPostRide} />} />
+        <Route path='/AvailableRides'/>
+      </Routes>
+
+      <h2 id="listAvailableRides">
         List Available Rides
-      </h3>
-      <RideList rides={filterRides} />
-      <NewRidePost addPostRide={addPostRide} />
+       
+      </h2>
+      <RideList rides={filterRides} updateBookings={updateBookings} />
+
     </div>
   );
 }

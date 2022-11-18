@@ -8,7 +8,7 @@
       "departure": "New York",
       "destination": "New Jersey",
       "price": "15",
-      "seats": "2",
+      "seats": "9",
       "id": 1
     },
     {
@@ -27,10 +27,10 @@
       "date": "2022-11-29",
       "firstname": "frank",
       "lastname": "Iron",
-      "departure": "New York",
+      "departure": "Chicago",
       "destination": "New York",
-      "price": "3",
-      "seats": "1",
+      "price": "120",
+      "seats": "4",
       "id": 3
     },
     {
@@ -39,20 +39,20 @@
       "firstname": "Richmond",
       "lastname": "Nkansah",
       "departure": "New York",
-      "destination": "New Jersey",
-      "price": "2",
-      "seats": "1",
+      "destination": "Virginia",
+      "price": "62",
+      "seats": "3",
       "id": 4
     },
     {
       "image": "https://www.cars.com/i/large/in/v2/stock_photos/fef62cc0-9c25-4725-a05f-bec703acaafd/ad699600-bf2b-405b-8e68-8d51e7e3bbfd.png",
       "date": "2022-11-22",
-      "firstname": "Richmond",
-      "lastname": "Nkansah",
+      "firstname": "David",
+      "lastname": "Bob",
       "departure": "New York",
       "destination": "New York",
-      "price": "5",
-      "seats": "3",
+      "price": "20.40",
+      "seats": 1,
       "id": 5
     },
     {
@@ -61,20 +61,20 @@
       "firstname": "John",
       "lastname": "Deere",
       "departure": "New York",
-      "destination": "Wichita",
-      "price": "2",
+      "destination": "San Francisco",
+      "price": "2.32",
       "seats": "2",
       "id": 6
     },
     {
       "image": "https://images.squarespace-cdn.com/content/v1/59a18fe46b8f5be647f23512/1632086698422-H41DO2XM0XSREYSFAUN3/vip-limo-service-rolls-royce-phantom-300-exterior-01-1500.jpg",
       "date": "2022-11-15",
-      "firstname": "Jack",
-      "lastname": "Holmes",
-      "departure": "Las Vegas",
-      "destination": "Toronto",
-      "price": "5",
-      "seats": "6",
+      "firstname": "Sara",
+      "lastname": "Opsin",
+      "departure": "Florida",
+      "destination": "Atlanta",
+      "price": "320.10",
+      "seats": "2",
       "id": 7
     },
     {
@@ -96,18 +96,18 @@
       "departure": "New Jersey",
       "destination": "New York",
       "price": "2",
-      "seats": "4",
+      "seats": "3",
       "id": 9
     },
     {
       "image": "https://iycstorage.s3.amazonaws.com/import/wordpress/2015/09/Yacht_Impromptu_Superyacht_charter_profile.jpg",
       "date": "2022-11-18",
-      "firstname": "Low",
-      "lastname": "Up",
+      "firstname": "Lowe",
+      "lastname": "Lipton",
       "departure": "D.C",
-      "destination": "Venice",
-      "price": "-10",
-      "seats": "1",
+      "destination": "Sacramento",
+      "price": "100",
+      "seats": "6",
       "id": 10
     },
     {
